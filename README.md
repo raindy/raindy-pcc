@@ -55,11 +55,10 @@ CREATE TABLE if not exists `account` (
 
 drop table if exists `follow`;
 CREATE TABLE if not exists `follow` (
-  `from_uid` int UNSIGNED NOT NULL,
-  `to_uid` varchar(64) NOT NULL,
+  `source_uid` int UNSIGNED NOT NULL,
+  `follow_uid` varchar(64) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`from_uid`,`to_uid`),
-  unique index (to_uid,from_uid)
+  PRIMARY KEY (`source_uid`,`follow_uid`)
 ) ENGINE=InnoDB;
 
 drop table if exists `target_like`;
