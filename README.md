@@ -33,6 +33,7 @@
 
 - /user/new?user_name=xx #新增用户
 - /user/get?user_id=xx #获取用户
+- /user/follow?source_uid=xx&follow_uid=xx #follow用户
 
 ### 点赞 ###
 
